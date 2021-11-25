@@ -29,11 +29,11 @@ def main():
     player = Player()
     ai = Computer()
 
-    player.choice = input("pick choice")
+    player.choice = input("Pick your choice! ")
     if player.choice in choices:
         choices.remove(player.choice)
         ai.choice = ai.make_choice(player, choices)
-        print(f"ai chose {ai.choice}")
+        print(f"Computer chose {ai.choice}")
 
         if check_win(player, ai) == player:
             print("you win!")
